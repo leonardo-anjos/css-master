@@ -1,0 +1,40 @@
+.content {
+  position: absolute;
+  top: 30%; 
+  margin-top: -25px; 
+  left: 50%; 
+  margin-left: -150px;
+}
+
+/* create the square */
+.heart {
+  display: block;
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: #ff3315;
+  position: relative;
+  transform: rotateZ(-45deg);
+}
+
+/* create the circles */
+.heart::after, .heart::before {
+  display: block;
+  content: '';
+  width: 100px;
+  height: 100px;
+  background-color: #ff3315;
+  border-radius: 50px;
+  position: absolute;
+}
+
+/* positioning the circles */
+.heart::after {
+  top: -50px;
+  left: 0;
+}
+
+.heart::before {
+  top: 0;
+  left: 50px;
+}
